@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.slider {
+  width: 600px;
+  margin: 20px auto;
+}
+.slider .slider-images {
+  position: relative;
+  border: 2px solid #009688;
+  border-radius: 6px;
+  /* overflow: hidden; */
+}
+.slider .slider-images .slide-number {
+  position: absolute;
+  z-index: 2;
+  left: 10px;
+  top: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 3px 7px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  text-transform: capitalize;
+  transition: 0.3s;
+  user-select: none;
+}
+.slider .slider-images .slide-number:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.slider .slider-images img {
+  position: absolute;
+  width: 596px;
+  height: 300px;
+  opacity: 0;
+  transition: opacity 1s;
+  border-radius: 6px;
+}
+.slider .slider-images img.active {
+  opacity: 1;
+}
+.slider .slider-controls {
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider .slider-controls i {
+  color: #009687a8;
+  font-size: 40px;
+  z-index: 2;
+  margin: 0 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.slider .slider-controls i.disabled {
+  cursor: no-drop;
+}
+.slider .slider-controls i:hover {
+  color: #009688;
+  font-size: 45px;
+}
+.slider .slider-controls i.disabled:hover {
+  font-size: 40px;
+}
+.slider .bullets ul {
+  margin: 10px 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider .bullets ul li {
+  border: 1px solid #009688;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 0 3px;
+  transition: 0.3s;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+.slider .bullets ul li:hover {
+  background-color: #009688;
+  color: white;
+  width: 30px;
+  height: 30px;
+}
+.slider .bullets ul li.active {
+  background-color: #009688;
+  color: white;
+  width: 30px;
+  height: 30px;
+}
